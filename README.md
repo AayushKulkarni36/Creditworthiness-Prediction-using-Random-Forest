@@ -1,60 +1,91 @@
 # 💳 Creditworthiness Prediction using Random Forest
 
-This project predicts whether a person is creditworthy (i.e., likely to repay a loan) based on their financial and personal attributes using a machine learning algorithm — Random Forest Classifier.
+This project predicts whether a person is creditworthy (i.e., likely to repay a loan) based on their financial and personal attributes using a machine learning algorithm — **Random Forest Classifier**.
 
-It was developed as part of an internship assignment at **Celebal Technologies**.
+> Developed as part of an internship assignment at **Celebal Technologies**.
 
 ---
 
 ## 📁 Project Overview
 
-Credit risk assessment is a crucial part of financial decision-making. This project uses a classification model to predict whether an individual is a **good** or **bad** credit risk based on historical financial data.
+Credit risk assessment is a crucial part of financial decision-making. This project uses a supervised classification model to predict whether an individual is a **good** or **bad** credit risk based on historical financial data.
 
 ---
 
 ## 📊 Dataset Information
 
-- **Source**: [UCI Machine Learning Repository – German Credit Data](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data)
-- **Size**: 1000 records
-- **Attributes**: 20 features related to credit history, income, employment status, savings, age, and more.
-- **Target Variable**:
-  - `1` → Good Credit Risk
-  - `2` → Bad Credit Risk (converted to `0` in the code for binary classification)
-
-  
+- **Source**: [UCI German Credit Dataset](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data)
+- **Records**: 1000 individuals
+- **Attributes**: 20 financial/personal features (age, employment, savings, etc.)
+- **Target**: Credit Risk — `1` (Good) or `2` (Bad) → Converted to binary (`1` and `0`)
 
 ---
 
-## 🧠 Machine Learning Approach
+## 🧠 Machine Learning Workflow
 
-We use the **Random Forest Classifier**, a robust ensemble learning technique that combines multiple decision trees to improve prediction accuracy and control overfitting.
+We use the **Random Forest Classifier**, a powerful ensemble learning technique that reduces variance and improves predictive accuracy.
 
-### Steps Followed:
-1. Data preprocessing and encoding
-2. Feature-target separation
-3. Train-test split (80:20)
-4. Model training using Random Forest
-5. Evaluation with:
-   - Accuracy
-   - Confusion Matrix
-   - Precision, Recall, F1-score
-6. Feature importance visualization
+### ✔️ Steps Followed:
+1. Convert raw data (`german.data`) to CSV format
+2. Preprocess the dataset:
+   - Label encode categorical columns
+   - Convert target to binary
+3. Split into training & testing sets (80/20)
+4. Train using `RandomForestClassifier` from scikit-learn
+5. Evaluate model performance
+6. Visualize feature importances
 
 ---
 
 ## 🧪 Model Performance
 
-✅ **Test Accuracy**: ~80.5%
+- ✅ **Accuracy**: ~80.5%
+- 📊 **Confusion Matrix**:
 
-📌 **Insights**:
-- Performs well in identifying good credit risks.
-- Confusion matrix and classification report show balanced performance.
-- Model may be slightly biased toward class `1` due to class imbalance.
+- 🔍 **Classification Report**:
+- Precision for class `1`: 82%
+- Precision for class `0`: 74%
+
+📌 **Insight**:  
+The model performs well, especially for predicting good credit risk (`1`). It slightly underperforms on class `0` due to class imbalance, which is a common challenge in such datasets.
 
 ---
 
-## 🚀 How to Run
+## 🚀 How to Run the Project
 
-### 1️⃣ Clone the Repository
+### 🛠️ Setup
+
 ```bash
-cd your/folder/path
+# Clone the repository
+git clone https://github.com/AayushKulkarni36/Creditworthiness-Prediction-using-Random-Forest.git
+cd Creditworthiness-Prediction-using-Random-Forest
+
+# Create virtual environment
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+Project/
+│
+├── data/
+│   ├── german.data               # Raw input data
+│   ├── german_credit_data.csv    # Cleaned CSV output
+│   └── datacsv.py                # Script to convert raw data
+│
+├── src/
+│   ├── data_preprocessing.py     # Preprocessing functions
+│   ├── model.py                  # Model training & evaluation
+│   └── utils.py                  # Visualization
+│
+├── main.py                       # Entry point
+├── requirements.txt              # Python dependencies
+└── README.md                     # Project documentation
+
+# Author
+Ayush Kulkarni
+Final Year B.E. (Information Technology)
+Intern at Celebal Technologies
+GitHub: AayushKulkarni36
