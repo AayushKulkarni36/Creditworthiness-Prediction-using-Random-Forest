@@ -84,8 +84,11 @@ Project/
 ├── requirements.txt              # Python dependencies
 └── README.md                     # Project documentation
 
-# Author
+# 👨‍💻 Author
 Ayush Kulkarni
+
 Final Year B.E. (Information Technology)
+
 Intern at Celebal Technologies
+
 GitHub: AayushKulkarni36
