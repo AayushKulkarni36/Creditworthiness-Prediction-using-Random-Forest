@@ -6,13 +6,13 @@ This project predicts whether a person is creditworthy (i.e., likely to repay a 
 
 ---
 
-## 📁 Project Overview
+##  Project Overview
 
 Credit risk assessment is a crucial part of financial decision-making. This project uses a supervised classification model to predict whether an individual is a **good** or **bad** credit risk based on historical financial data.
 
 ---
 
-## 📊 Dataset Information
+##  Dataset Information
 
 - **Source**: [UCI German Credit Dataset](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data)
 - **Records**: 1000 individuals
@@ -20,12 +20,11 @@ Credit risk assessment is a crucial part of financial decision-making. This proj
 - **Target**: Credit Risk — `1` (Good) or `2` (Bad) → Converted to binary (`1` and `0`)
 
 ---
-
-## 🧠 Machine Learning Workflow
+##  Machine Learning Workflow
 
 We use the **Random Forest Classifier**, a powerful ensemble learning technique that reduces variance and improves predictive accuracy.
 
-### ✔️ Steps Followed:
+###  Steps Followed:
 1. Convert raw data (`german.data`) to CSV format
 2. Preprocess the dataset:
    - Label encode categorical columns
@@ -37,23 +36,23 @@ We use the **Random Forest Classifier**, a powerful ensemble learning technique 
 
 ---
 
-## 🧪 Model Performance
+##  Model Performance
 
-- ✅ **Accuracy**: ~80.5%
-- 📊 **Confusion Matrix**:
+-  **Accuracy**: ~80.5%
+-  **Confusion Matrix**:
 
-- 🔍 **Classification Report**:
+- **Classification Report**:
 - Precision for class `1`: 82%
 - Precision for class `0`: 74%
 
-📌 **Insight**:  
+ **Insight**:  
 The model performs well, especially for predicting good credit risk (`1`). It slightly underperforms on class `0` due to class imbalance, which is a common challenge in such datasets.
 
 ---
 
-## 🚀 How to Run the Project
+##  How to Run the Project
 
-### 🛠️ Setup
+###  Setup
 
 ```bash
 # Clone the repository
@@ -84,8 +83,8 @@ Project/
 ├── requirements.txt              # Python dependencies
 └── README.md                     # Project documentation
 
-# 👨‍💻 Author
-Ayush Kulkarni
+#  Author
+Aayush Kulkarni
 
 Final Year B.E. (Information Technology)
 
