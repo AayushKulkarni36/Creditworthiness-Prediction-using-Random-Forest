@@ -1,4 +1,4 @@
-# 💳 Creditworthiness Prediction using Random Forest
+#  Creditworthiness Prediction using Random Forest
 
 This project predicts whether a person is creditworthy (i.e., likely to repay a loan) based on their financial and personal attributes using a machine learning algorithm — **Random Forest Classifier**.
 
@@ -88,6 +88,4 @@ Aayush Kulkarni
 
 Final Year B.E. (Information Technology)
 
-Intern at Celebal Technologies
-
-GitHub: AayushKulkarni36
+Intern at Celebal Technologies.
